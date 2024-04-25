@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import RouterLink from "@/components/UI/RouterLink.vue";
-import Heading from "@/components/UI/AppHeading.vue";
+import RouterLink from '@/components/UI/RouterLink.vue'
+import Heading from '@/components/UI/AppHeading.vue'
+
+defineProps<{
+  titulo: string
+}>()
 </script>
 
 <template>
@@ -8,6 +12,6 @@ import Heading from "@/components/UI/AppHeading.vue";
     <div class="flex justify-end">
       <RouterLink to="inicio">Volver</RouterLink>
     </div>
-    <Heading>Agregar Cliente</Heading>
+    <Heading>{{ titulo }}</Heading>
   </div>
 </template>
